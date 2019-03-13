@@ -51,6 +51,7 @@ public class CollectionTestSuite {
             int number = iterator.next();
             if(number % 2 == 1) {
                 result = false;
+                break;
             }
         }
         Assert.assertTrue(result);
