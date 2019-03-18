@@ -9,35 +9,55 @@ public class ShapeCollectorTestSuite {
     public void testAddFigure() {
         //Given
         ShapeCollector shapes = new ShapeCollector();
-        Square square = new Square(4);
-        int size = shapes.size();
+        Shape square = new Square(4);
+        Shape circle = new Circle(4);
+        Shape triangle = new Triangle(4, 4);
         //When
         shapes.addFigure(square);
+        shapes.addFigure(circle);
+        shapes.addFigure(triangle);
         //Then
-        Assert.assertEquals(size+1, shapes.size());
+        Assert.assertEquals(3, shapes.size());
     }
 
     @Test
     public void testRemoveFigure() {
         //Given
-        Square square = new Square(4);
         ShapeCollector shapes = new ShapeCollector();
+        Shape square = new Square(4);
+        Shape circle = new Circle(4);
+        Shape triangle = new Triangle(4, 4);
         shapes.addFigure(square);
-        int size = shapes.size();
+        shapes.addFigure(circle);
+        shapes.addFigure(triangle);
         //When
-        shapes.removeFigure(square);
+        shapes.removeFigure(circle);
         //Then
-        Assert.assertEquals(size-1, shapes.size());
+        Assert.assertEquals(2, shapes.size());
     }
 
     @Test
     public void testGetFigure() {
         //Given
-        Square square = new Square(4);
+        Shape square = new Square(4);
         ShapeCollector shapes = new ShapeCollector();
         //When
         shapes.addFigure(square);
         //Then
         Assert.assertEquals(square, shapes.getFigure(0));
+    }
+
+    @Test
+    public void testShowFigure() {
+        //Given
+        ShapeCollector shapes = new ShapeCollector();
+        Shape square = new Square(4);
+        Shape circle = new Circle(4);
+        Shape triangle = new Triangle(4, 4);
+        shapes.addFigure(square);
+        shapes.addFigure(circle);
+        shapes.addFigure(triangle);
+        //When
+        shapes.showFigures();
     }
 }
