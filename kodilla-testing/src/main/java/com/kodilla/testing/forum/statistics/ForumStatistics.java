@@ -1,9 +1,9 @@
 package com.kodilla.testing.forum.statistics;
 
 public class ForumStatistics {
-    private int userCount = 0;
-    private int postCount = 0;
-    private int commentCount = 0;
+    private double userCount = 0;
+    private double postCount = 0;
+    private double commentCount = 0;
     private double postsByUsers = 0;
     private double commentsByUsers = 0;
     private double commentsByPosts = 0;
@@ -30,15 +30,15 @@ public class ForumStatistics {
         System.out.println("Average number of comments in posts: " + commentsByPosts);
     }
 
-    public int getUserCount() {
+    public double getUserCount() {
         return userCount;
     }
 
-    public int getPostCount() {
+    public double getPostCount() {
         return postCount;
     }
 
-    public int getCommentCount() {
+    public double getCommentCount() {
         return commentCount;
     }
 
