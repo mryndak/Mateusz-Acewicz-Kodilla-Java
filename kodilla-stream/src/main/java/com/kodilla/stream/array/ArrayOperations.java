@@ -15,5 +15,6 @@ public interface ArrayOperations {
                 .orElse(0.0);
 
         return average;
+        //
     }
 }
